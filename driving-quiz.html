@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>15 vocabulary items about driving</title>
+  <meta name="description" content="jQuery plugin allowing a creating of fill in the blank quiz">
+  <meta name="keywords" content="jquery plugin, fill in the blank, javascript, jquery, fill, blank" />
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/quizyfillblank.css">
+  
+  <style>
+  body{
+    font-family:Helvetica, Arial, Verdana; 
+    background: url('img/bg-tile.jpg') repeat;
+  }
+  
+  .quizy-fitb-answer{
+    font-size:1.5em;
+    width: 200px !important;
+   }
+  .text-style1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:1.8em;
+    line-height: 1.6 !important;
+    margin-top:20px;
+    text-align:center;
+    line-height:24px;
+  }
+  
+  .text-style2{
+    font-style:italic;
+    color:#777;
+  }
+  
+  .text-style3{
+    width:200px;
+    margin:auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  </style>
+  
+</head>
+<body>
+
+  <h1>15 vocabulary items about <a href="https://www.allthingstopics.com/driving.html">driving</a></h1>
+  <h2>Using <a href="https://github.com/frenski/quizy-fillintheblank"> Quizy</a> jQuery fill in the blank plugin</h2>
+  
+  <div id="main" role="main">
+    
+    <div id="tutorial-fillblank">
+      <div class="text-style2">Drag the items to the correct blank spaces<br>(the correct answers will appear once you drag the last item)</div>
+      <div id="fillblank-text" class='text-style1'></div><br><br>
+      <div id="fillblank-ph" class='text-style3'></div>
+    </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+
+  <script src="js/jquery.quizyfillblank.min.js"></script>
+  
+  <script>
+    $('#tutorial-fillblank').quizyFillBlank({
+          textItems:['A ', 
+                     'is a person who drives a car or other vehicle such as a truck or motorcycle. The opposite of legal is', 
+		     '; for example, driving too fast. Our car is almost out of gas. Then let’s find a ', 
+                     '. Let’s ', 
+                     ' right at the next intersection. A ',
+		     ' is a person who is walking. Drive safely. Don’t ',
+                     ' into another car. A ',
+                     ' is a person in a car, but isn’tdriving. After the ',
+                     ' , I was in a hospital for a week. The car ahead of us is driving too slowly.  I’m going to ',
+                     ' it. I was eighteen when I got my first ',
+                     ' How old were you? My car won’t start.  I need to bring my car to a garage so they can fix the ',
+                     ' . I don’t need to put gas into my car.  I have an ',
+                     ' ! The ',
+                     ' is terrible during “rush hour” early in the mornings and late in the afternoons. The ',
+                     ' here is 80 kph.', 
+                     ' is a very serious crime.  It causes many injuries and deaths every year.'
+          ],
+          anItems:['accident', 'crash', 'driver', 'driving license', 'drunk driving', 'electric car', 'engine', 'gas station', 'illegal', 'pass', 'passenger', 'pedestrian', 'speed limit', 'traffic', 'turn'], 
+          anItemsCorrect:[2,8,7,14,11,1,10,0,9,3,6,5,13,12,4],
+          blockSize:250
+        });
+  </script>
+</body>
+</html>
